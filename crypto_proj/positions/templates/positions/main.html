@@ -1,10 +1,10 @@
 {% extends 'base.html' %}
 
-{% block title %}main page{% endblock title %}
+{% block title %}Home{% endblock title %}
 
 {% block content %}
     <table class="table">
-        <head>
+        <thead>
             <tr>
                 <th scope="col">Logo</th>
                 <th scope="col">Name</th>
@@ -12,23 +12,26 @@
                 <th scope="col">Makret Cap</th>
                 <th scope="col">Price</th>
             </tr>
-        </head>
+        </thead>
         <tbody>
             {% if data %}
                 {% for obj in data %}
                     <tr>
                         <th><img scr={{obj.image}} height = 70></th>
-                        <td class=""align-middle">{{obj.name}}</td>
-                        <td class=""align-middle">{{obj.market_cap_rank}}</td>
-                        <td class=""align-middle">{{obj.market_cap}}</td>
-                        <td class=""align-middle">{{obj.current_price}}</td>
+                        <td class="align-middle">{{obj.name}}</td>
+                        <td class="align-middle">{{obj.market_cap_rank}}</td>
+                        <td class="align-middle">{{obj.market_cap}}</td>
+                        <td class="align-middle">{{obj.current_price}}</td>
                     </tr>
-                {% end for %}
+                {% endfor %}
             {% else %}
                 <h3>Nothing Here</h3>
-            {% end if %}
+            {% endif %}
         </tbody>
 
     </table>
 
-{% endblock body %}
+{% endblock content %}
+
+{% block scripts %}
+{% endblock scripts %}
