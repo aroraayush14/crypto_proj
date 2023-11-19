@@ -10,7 +10,7 @@ class Test(models.Model):
 
 class Position(models.Model):
     name = models.CharField(max_length=200)
-    image = models.URLField()
+    image = models.FileField(upload_to='images')
     price = models.CharField(max_length=200)
     rank = models.CharField(max_length=10)
     market_cap = models.CharField(max_length=200)
