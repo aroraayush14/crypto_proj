@@ -1,4 +1,4 @@
-# Crypto Project README
+# Crypto Project
 
 ## Description
 This project aims to fetch data from a cryptocurrency API and display information about the top 100 cryptocurrencies on a webpage. It utilizes API calls to gather the latest data and presents it in an organized manner for users to view.
